@@ -29,3 +29,4 @@ A service is a configuration that enables us to run and maintain a number of tas
 * we create a Log Group on CloudWatch to get the containers logs.
 * we create a Task Definition compatible with AWS FARGATE.
 * we create the ECS Service
+* we defined a Security Group to avoid external connections to the containers.
