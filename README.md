@@ -24,4 +24,8 @@ The ECR is a repository where we're going store the Docker Images of the applica
 And we're going to create the ECS Cluster, Service and Task Definition.
 A service is a configuration that enables us to run and maintain a number of tasks simultaneously in a cluster. The containers are defined by a Task Definition that are used to run tasks in a service.
 
-Before we create the ECS Cluster, we need to create an IAM policy to enable the service to pull the image from ECR.
+* Before we create the ECS Cluster, we need to create an IAM policy to enable the service to pull the image from ECR.
+* Then we create the ECS Cluster
+* we create a Log Group on CloudWatch to get the containers logs.
+* we create a Task Definition compatible with AWS FARGATE.
+* we create the ECS Service
