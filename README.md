@@ -43,3 +43,8 @@ The next step is to setup a Load Balancer.
 
 We need to create an autoscaling target and two simple autoscaling policies. One to scale by CPU usage and another one for Memory usage.
 So, the application will scale up if the memory or the cpu usage reaches 80% of usage. When it comes bellow this value, the application will scale down.
+
+# Variables
+
+This is where we will have the variables definitions.
+The values for each variable are defined in a file called `terraform.tfvars`
