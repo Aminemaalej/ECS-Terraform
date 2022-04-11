@@ -36,3 +36,4 @@ A service is a configuration that enables us to run and maintain a number of tas
 
 The next step is to setup a Load Balancer.
 * Add a security group for the Load Balancer
+* Create a Load Balancer Target Group, it will relate the Load Balancer with the Containers.
