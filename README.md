@@ -16,3 +16,7 @@ The first step is create a Bucket on AWS S3 to store the Terraform State. It's n
 
 We will create a VPC and configure some Networking resources we're going to use further.
 For Networking, it is necessary to create Public and Private Subnets within the VPC, also a Internet Gateway and Route Tables for Public Subnets.
+
+# Container Registry and ECS Cluster
+It's time to create the Container Registry and the ECS Cluster.
+The ECR is a repository where we're going store the Docker Images of the application we want to deploy.
