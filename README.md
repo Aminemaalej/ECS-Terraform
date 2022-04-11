@@ -38,3 +38,8 @@ The next step is to setup a Load Balancer.
 * Add a security group for the Load Balancer
 * Create a Load Balancer Target Group, it will relate the Load Balancer with the Containers.
 * Create HTTPS listener for the load balancer
+
+# Autoscaling
+
+We need to create an autoscaling target and two simple autoscaling policies. One to scale by CPU usage and another one for Memory usage.
+So, the application will scale up if the memory or the cpu usage reaches 80% of usage. When it comes bellow this value, the application will scale down.
