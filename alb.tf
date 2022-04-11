@@ -57,3 +57,33 @@ resource "aws_lb_target_group" "target_group" {
     Environment = var.app_environment
   }
 }
+
+resource "aws_lb_listener" "listener" {
+  load_balancer_arn = aws_alb.application_load_balancer.id
+  port              = "80"
+  protocol          = "HTTP"
+
+  default_action {
+    type = "redirect"
+
+    redirect {
+      port        = "443"
+      protocol    = "HTTPS"
+      status_code = "HTTP_301"
+    }
+  }
+}
+
+resource "aws_lb_listener" "listener-https" {
+  load_balancer_arn = aws_alb.application_load_balancer.id
+  port              = "443"
+  protocol          = "HTTPS"
+
+  ssl_policy      = "ELBSecurityPolicy-2016-08"
+  certificate_arn = "<certificate-arn>"
+
+  default_action {
+    target_group_arn = aws_lb_target_group.target_group.id
+    type             = "forward"
+  }
+}
