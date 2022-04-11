@@ -18,6 +18,7 @@ We will create a VPC and configure some Networking resources we're going to use 
 For Networking, it is necessary to create Public and Private Subnets within the VPC, also a Internet Gateway and Route Tables for Public Subnets.
 
 # Container Registry and ECS Cluster
+
 It's time to create the Container Registry and the ECS Cluster.
 The ECR is a repository where we're going store the Docker Images of the application we want to deploy.
 
@@ -30,3 +31,7 @@ A service is a configuration that enables us to run and maintain a number of tas
 * we create a Task Definition compatible with AWS FARGATE.
 * we create the ECS Service
 * we defined a Security Group to avoid external connections to the containers.
+
+# Application Load Balancer
+
+The next step is to setup a Load Balancer.
